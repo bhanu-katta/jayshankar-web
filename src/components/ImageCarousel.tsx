@@ -1,14 +1,9 @@
-import React from 'react';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import { Card, CardContent } from "@/components/ui/card";
+import React, { useState, useEffect } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const ImageCarousel = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   const images = [
     {
       src: "https://plus.unsplash.com/premium_photo-1661933050836-3f9e3d7eda61?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -23,7 +18,7 @@ const ImageCarousel = () => {
       description: "Sustainable energy solutions"
     },
     {
-      src: "https://plus.unsplash.com/premium_photo-1661836187612-c13f34f228f4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dp",
+      src: "https://plus.unsplash.com/premium_photo-1661836187612-c13f34f228f4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       alt: "Paper Production",
       title: "Paper Manufacturing",
       description: "Innovative packaging solutions"
@@ -48,6 +43,23 @@ const ImageCarousel = () => {
     }
   ];
 
+  // Auto-advance carousel
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000); // Change slide every 5 seconds
+
+    return () => clearInterval(timer);
+  }, [images.length]);
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  };
+
   return (
     <section className="py-16 bg-gradient-to-r from-gray-50 to-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -60,23 +72,80 @@ const ImageCarousel = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {images.map((image, index) => (
-            <div key={index} className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="relative">
+        {/* Professional Carousel */}
+        <div className="relative">
+          <div className="relative h-96 md:h-[500px] overflow-hidden rounded-2xl shadow-2xl">
+            {/* Main Image */}
+            <div className="relative h-full">
+              <img
+                src={images[currentIndex].src}
+                alt={images[currentIndex].alt}
+                className="w-full h-full object-cover transition-all duration-700 ease-in-out"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+              
+              {/* Content Overlay */}
+              <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
+                <h3 className="text-3xl md:text-4xl font-bold mb-4">
+                  {images[currentIndex].title}
+                </h3>
+                <p className="text-lg md:text-xl text-gray-200 max-w-2xl">
+                  {images[currentIndex].description}
+                </p>
+              </div>
+            </div>
+
+            {/* Navigation Buttons */}
+            <button
+              onClick={prevSlide}
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full backdrop-blur-sm transition-all duration-300 hover:scale-110"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+            
+            <button
+              onClick={nextSlide}
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full backdrop-blur-sm transition-all duration-300 hover:scale-110"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+
+            {/* Dots Indicator */}
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+              {images.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentIndex(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === currentIndex 
+                      ? 'bg-white scale-125' 
+                      : 'bg-white/50 hover:bg-white/75'
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Thumbnail Navigation */}
+          <div className="mt-6 flex justify-center space-x-4 overflow-x-auto pb-4">
+            {images.map((image, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`flex-shrink-0 w-20 h-16 rounded-lg overflow-hidden transition-all duration-300 ${
+                  index === currentIndex 
+                    ? 'ring-2 ring-gold-500 scale-110' 
+                    : 'hover:scale-105'
+                }`}
+              >
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                  <h3 className="text-xl font-semibold mb-2">{image.title}</h3>
-                  <p className="text-sm text-gray-200">{image.description}</p>
-                </div>
-              </div>
-            </div>
-          ))}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
     </section>
