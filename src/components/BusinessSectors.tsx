@@ -50,38 +50,48 @@ const BusinessSectors = () => {
           {companies.map((company, index) => (
             <div 
               key={index}
-              className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group"
+              className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group"
             >
-              <div className="text-gold-600 mb-6 group-hover:scale-110 transition-transform duration-300">
-                {company.icon}
-              </div>
-              <h3 className="text-lg font-bold text-navy-900 mb-4 leading-tight">
-                {company.title}
-              </h3>
-              <p className="text-gray-600 mb-6 leading-relaxed text-sm">
-                {company.description}
-              </p>
-              <div className="space-y-3 mb-6">
-                <div className="flex items-center text-sm text-gray-600">
-                  <MapPin className="w-4 h-4 mr-2 text-gold-600" />
-                  <span>{company.location}</span>
-                </div>
-                <div className="flex items-center text-sm text-gray-600">
-                  <Target className="w-4 h-4 mr-2 text-gold-600" />
-                  <span>{company.capacity}</span>
-                </div>
-                <div className="flex items-center text-sm text-gray-600">
-                  <Users className="w-4 h-4 mr-2 text-gold-600" />
-                  <span>{company.focus}</span>
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={`https://images.unsplash.com/photo-1610891015188-5369212db097?q=80&w=1529&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D=${index + 1}`}
+                  alt={company.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                <div className="absolute top-4 left-4 text-gold-600 group-hover:scale-110 transition-transform duration-300">
+                  {company.icon}
                 </div>
               </div>
-              <Link 
-                to={company.link}
-                className="inline-flex items-center text-gold-600 hover:text-gold-700 font-semibold transition-colors duration-300"
-              >
-                Learn More
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Link>
+              <div className="p-8">
+                <h3 className="text-lg font-bold text-navy-900 mb-4 leading-tight">
+                  {company.title}
+                </h3>
+                <p className="text-gray-600 mb-6 leading-relaxed text-sm">
+                  {company.description}
+                </p>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center text-sm text-gray-600">
+                    <MapPin className="w-4 h-4 mr-2 text-gold-600" />
+                    <span>{company.location}</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-600">
+                    <Target className="w-4 h-4 mr-2 text-gold-600" />
+                    <span>{company.capacity}</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-600">
+                    <Users className="w-4 h-4 mr-2 text-gold-600" />
+                    <span>{company.focus}</span>
+                  </div>
+                </div>
+                <Link 
+                  to={company.link}
+                  className="inline-flex items-center text-gold-600 hover:text-gold-700 font-semibold transition-colors duration-300"
+                >
+                  Learn More
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+              </div>
             </div>
           ))}
         </div>
