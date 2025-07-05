@@ -1,28 +1,27 @@
-
 import React from 'react';
-import { Award, Users, Globe, TrendingUp } from 'lucide-react';
+import { Award, Users, Globe, TrendingUp, Star, Building2, Heart } from 'lucide-react';
 
 const About = () => {
   const achievements = [
     {
       icon: <Award className="w-6 h-6" />,
-      title: "Industry Leadership",
-      description: "Market leader across multiple sectors"
+      title: "Certified Corporate Director",
+      description: "Shri T. Srinivasa Rao - IOD, India"
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: "50,000+ Employees",
-      description: "Diverse workforce driving innovation"
+      title: "200+ Man-Years",
+      description: "Combined expertise across sectors"
     },
     {
       icon: <Globe className="w-6 h-6" />,
-      title: "Global Presence",
-      description: "Operations across 15+ countries"
+      title: "International Partnerships",
+      description: "Singapore & Malaysia collaborations"
     },
     {
       icon: <TrendingUp className="w-6 h-6" />,
-      title: "Sustainable Growth",
-      description: "Consistent performance for decades"
+      title: "Strategic Vision",
+      description: "25 years of corporate expertise"
     }
   ];
 
@@ -33,17 +32,17 @@ const About = () => {
           <div className="space-y-8">
             <div>
               <h2 className="text-4xl font-bold text-navy-900 mb-6">
-                Legacy of Excellence Since 1970
+                Founders and Key Leaders
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                From humble beginnings to becoming one of India's most respected business houses, 
-                our journey is marked by unwavering commitment to excellence, innovation, and 
-                sustainable growth.
+                Founded by visionary First Generation Entrepreneur Shri T. Srinivasa Rao and his committed associates, 
+                our organization is built on a foundation of experience, innovation, and strategic vision. 
+                Shri Rao brings 25 years of comprehensive corporate expertise, with a proven track record 
+                in successfully executing complex infrastructure and power projects across India.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
-                We believe in creating value for all stakeholders - customers, employees, 
-                shareholders, and the communities we serve. Our diversified portfolio and 
-                strategic vision position us for continued growth in the digital age.
+                As a Certified Corporate Director from the Institute of Directors (IOD), India, he leads with 
+                integrity and strategic foresight, fostering a culture of excellence and sustainable growth.
               </p>
             </div>
 
@@ -68,24 +67,24 @@ const About = () => {
 
           <div className="relative">
             <div className="bg-gradient-to-br from-navy-900 to-navy-700 rounded-2xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-6">Our Vision</h3>
+              <h3 className="text-2xl font-bold mb-6">Our Vision and Strategic Focus</h3>
               <blockquote className="text-lg italic mb-6">
-                "To be a globally respected conglomerate that creates sustainable value 
-                through innovation, excellence, and responsible business practices."
+                "Guided by our experienced leaders, the organization is committed to advancing innovative 
+                projects that drive economic development, social progress, and environmental sustainability."
               </blockquote>
               
               <div className="space-y-4">
                 <div className="flex justify-between items-center border-b border-navy-600 pb-2">
-                  <span>Revenue Growth</span>
-                  <span className="text-gold-400 font-semibold">15% YoY</span>
+                  <span>Leadership Experience</span>
+                  <span className="text-gold-400 font-semibold">25+ Years</span>
                 </div>
                 <div className="flex justify-between items-center border-b border-navy-600 pb-2">
-                  <span>Market Cap</span>
-                  <span className="text-gold-400 font-semibold">₹45,000Cr</span>
+                  <span>Team Expertise</span>
+                  <span className="text-gold-400 font-semibold">200+ Man-Years</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span>ESG Rating</span>
-                  <span className="text-gold-400 font-semibold">AA+</span>
+                  <span>International PR</span>
+                  <span className="text-gold-400 font-semibold">20+ Years</span>
                 </div>
               </div>
             </div>

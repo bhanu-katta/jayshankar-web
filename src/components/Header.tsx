@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
@@ -8,9 +7,8 @@ const Header = () => {
   const navigation = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
-    { name: 'Businesses', href: '#businesses' },
-    { name: 'Sustainability', href: '#sustainability' },
-    { name: 'News', href: '#news' },
+    { name: 'Companies', href: '#companies' },
+    { name: 'Leadership', href: '#leadership' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -21,7 +19,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <h1 className="text-2xl font-bold text-navy-900">
-              <span className="text-navy-900">CORPORATE</span>
+              <span className="text-navy-900">JAYA SHANKAR</span>
               <span className="text-gold-600 ml-1">GROUP</span>
             </h1>
           </div>

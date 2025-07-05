@@ -1,73 +1,156 @@
-# Welcome to your Lovable project
+# Jaya Shankar Group Website
 
-## Project info
+A modern, professional website for Jaya Shankar Group, showcasing the company's three main subsidiaries and their commitment to sustainable infrastructure development.
 
-**URL**: https://lovable.dev/projects/c5c9588f-d6dd-40a5-821b-848dd7ee94b8
+## About Jaya Shankar Group
 
-## How can I edit this code?
+Founded by visionary First Generation Entrepreneur Shri T. Srinivasa Rao, Jaya Shankar Group is committed to advancing innovative projects that drive economic development, social progress, and environmental sustainability.
 
-There are several ways of editing your application.
+### Our Companies
 
-**Use Lovable**
+1. **JAYASHANKAR MULTI PRODUCT INDUSTRIAL PARK & SEZ PRIVATE LIMITED**
+   - Developing world-class industrial parks and SEZs across India
+   - Focus on pharmaceutical infrastructure and modern manufacturing facilities
+   - 2000+ acres development in Odisha & Chhattisgarh
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/c5c9588f-d6dd-40a5-821b-848dd7ee94b8) and start prompting.
+2. **JAYASHANKAR PULP AND PAPER MILLS PRIVATE LIMITED**
+   - Pioneering sustainable packaging solutions
+   - State-of-the-art paper mill facilities
+   - 700,000 tons per year production capacity
+   - Located in West Godavari District, Andhra Pradesh
 
-Changes made via Lovable will be committed automatically to this repo.
+3. **JAYASHANKAR POWER AND INFRASTRUCTURE PRIVATE LIMITED**
+   - Developing and operating large-scale thermal and solar power facilities
+   - Roads and underground tunnels infrastructure
+   - 400 MW total capacity
+   - BOOT model operations
 
-**Use your preferred IDE**
+## Leadership
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- **Shri T. Srinivasa Rao** - Founder & Chairman
+  - 25 years of comprehensive corporate expertise
+  - Certified Corporate Director from Institute of Directors (IOD), India
+  - Proven track record in complex infrastructure and power projects
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **Smt. T. L. S. Geetha Kameswari** - Public Relations Director
+  - 20 years of experience in cultivating international partnerships
+  - Leadership in facilitating overseas collaborations
+  - Gateway to India initiative
 
-Follow these steps:
+## Contact Information
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- **Address**: 1209, Aparna Westside, Behind DPS school Road, khajaguda Hyderabad-500089
+- **Phone**: +91 9390849709
+- **Email**: info@jayashankargroup.com
+- **Contact Person**: Mr. Dontharaju Kalyan Srinivas
+- **Contact Email**: Srikalyan@jayashankargroup.com
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Technology Stack
 
-# Step 3: Install the necessary dependencies.
-npm i
+- **Frontend**: React 18 with TypeScript
+- **Styling**: Tailwind CSS with custom design system
+- **UI Components**: Shadcn/ui components
+- **Routing**: React Router DOM
+- **Icons**: Lucide React
+- **Build Tool**: Vite
+- **Package Manager**: npm
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+## Getting Started
+
+### Prerequisites
+
+- Node.js (version 16 or higher)
+- npm (comes with Node.js)
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd jayashankar-group-website
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the development server:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. Open your browser and navigate to `http://localhost:5173`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Available Scripts
 
-**Use GitHub Codespaces**
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Project Structure
 
-## What technologies are used for this project?
+```
+src/
+├── components/          # Reusable UI components
+│   ├── Header.tsx     # Navigation header
+│   ├── Hero.tsx       # Hero section
+│   ├── BusinessSectors.tsx # Companies showcase
+│   ├── About.tsx      # About section
+│   ├── Leadership.tsx # Leadership team
+│   └── Footer.tsx     # Footer
+├── pages/             # Page components
+│   ├── Index.tsx      # Home page
+│   ├── IndustrialPark.tsx # Industrial Park page
+│   ├── PulpPaper.tsx  # Pulp & Paper page
+│   ├── PowerInfrastructure.tsx # Power & Infrastructure page
+│   └── NotFound.tsx   # 404 page
+├── lib/               # Utility functions
+└── hooks/             # Custom React hooks
+```
 
-This project is built with:
+## Features
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- **Responsive Design**: Mobile-first approach with responsive layouts
+- **Modern UI**: Clean, professional design with smooth animations
+- **SEO Optimized**: Proper meta tags and semantic HTML
+- **Accessibility**: ARIA labels and keyboard navigation support
+- **Performance**: Optimized bundle size and loading times
+- **Type Safety**: Full TypeScript implementation
 
-## How can I deploy this project?
+## Design System
 
-Simply open [Lovable](https://lovable.dev/projects/c5c9588f-d6dd-40a5-821b-848dd7ee94b8) and click on Share -> Publish.
+The website uses a custom design system with:
+- **Primary Colors**: Navy blue (#1e3a8a) and Gold (#d97706)
+- **Typography**: Modern sans-serif fonts
+- **Spacing**: Consistent spacing scale
+- **Components**: Reusable UI components with consistent styling
 
-## Can I connect a custom domain to my Lovable project?
+## Deployment
 
-Yes, you can!
+The website can be deployed to any static hosting service:
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+1. Build the project:
+```bash
+npm run build
+```
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+2. Deploy the `dist` folder to your hosting service
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
+## License
+
+This project is proprietary to Jaya Shankar Group.
+
+## Support
+
+For any questions or support, please contact:
+- Email: info@jayashankargroup.com
+- Phone: +91 9390849709
