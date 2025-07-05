@@ -1,4 +1,4 @@
-# Jaya Shankar Group Website
+# Jayshankar
 
 A modern, professional website for Jaya Shankar Group, showcasing the company's three main subsidiaries and their commitment to sustainable infrastructure development.
 
@@ -67,7 +67,7 @@ Founded by visionary First Generation Entrepreneur Shri T. Srinivasa Rao, Jaya S
 1. Clone the repository:
 ```bash
 git clone <repository-url>
-cd jayashankar-group-website
+cd jayshankar
 ```
 
 2. Install dependencies:
@@ -147,7 +147,7 @@ npm run build
 
 ## License
 
-This project is proprietary to Jaya Shankar Group.
+This project is proprietary to Jayshankar.
 
 ## Support
 
