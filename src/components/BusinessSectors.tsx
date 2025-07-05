@@ -35,7 +35,7 @@ const companies = [
 
 const BusinessSectors = () => {
   return (
-    <section id="companies" className="py-20 bg-gray-50 animate-fade-in" style={{ animationDelay: '0.05s', animationDuration: '1.2s', animationFillMode: 'both' }}>
+    <section id="companies" className="py-20 bg-gradient-to-b from-gray-50 to-gray-100 border-t border-b border-gray-200 animate-fade-in" style={{ animationDelay: '0.05s', animationDuration: '1.2s', animationFillMode: 'both' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-navy-900 mb-4">
@@ -45,11 +45,11 @@ const BusinessSectors = () => {
             Jaya Shankar Group operates through four strategic companies, each focused on driving innovation and sustainable growth in their respective sectors.
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-10 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {companies.map((company, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-card hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group flex flex-col overflow-hidden"
+              className="flex flex-col bg-white rounded-2xl shadow-card hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group overflow-hidden min-h-[420px]"
             >
               <div className="relative h-48 overflow-hidden">
                 <img
@@ -62,10 +62,10 @@ const BusinessSectors = () => {
                 </div>
               </div>
               <div className="flex-1 flex flex-col p-8">
-                <h3 className="text-lg font-bold text-navy-900 mb-2 leading-tight">
+                <h3 className="text-lg font-bold text-navy-900 mb-2 leading-tight min-h-[56px]">
                   {company.title}
                 </h3>
-                <p className="text-gray-600 mb-6 leading-relaxed text-sm min-h-[48px]">
+                <p className="text-gray-600 mb-6 leading-relaxed text-base min-h-[48px]">
                   {company.short}
                 </p>
                 <div className="mt-auto">

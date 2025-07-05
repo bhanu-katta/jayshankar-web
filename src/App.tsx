@@ -7,19 +7,8 @@ import Index from "./pages/Index";
 import IndustrialPark from "./pages/IndustrialPark";
 import PulpPaper from "./pages/PulpPaper";
 import PowerInfrastructure from "./pages/PowerInfrastructure";
+import OdalarevuRLNG from "./pages/OdalarevuRLNG";
 import NotFound from "./pages/NotFound";
-
-// Placeholder for Odalarevu RLNG page
-function OdalarevuRLNG() {
-  return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50">
-      <h1 className="text-3xl md:text-5xl font-bold text-navy-900 mb-6">ODALAREVU RLNG IMPORTS PVT LTD</h1>
-      <p className="max-w-2xl text-lg text-gray-700 text-center mb-8">
-        RLNG, Fertilizer, and Captive Port projects in Andhra Pradesh. (Full content coming soon!)
-      </p>
-    </div>
-  );
-}
 
 const queryClient = new QueryClient();
 
