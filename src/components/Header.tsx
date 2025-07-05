@@ -18,10 +18,12 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-navy-900">
-              <span className="text-navy-900">JAYA SHANKAR</span>
-              <span className="text-gold-600 ml-1">GROUP</span>
-            </h1>
+            <img
+              src="/JAYASHANKAR-GROUP.png"
+              alt="Jaya Shankar Group Logo"
+              className="h-12 w-auto"
+              style={{ maxHeight: 48 }}
+            />
           </div>
 
           {/* Desktop Navigation */}
