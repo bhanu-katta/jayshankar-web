@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -19,6 +18,9 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -43,7 +45,8 @@ export default {
 				},
 				accent: {
 					DEFAULT: 'hsl(var(--accent))',
-					foreground: 'hsl(var(--accent-foreground))'
+					foreground: 'hsl(var(--accent-foreground))',
+					500: '#7F5AF0',
 				},
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',
@@ -80,13 +83,25 @@ export default {
 					100: '#fdf6e3',
 					200: '#fbedc7',
 					300: '#f8e3ab',
-					400: '#f5da8f',
-					500: '#f2d073',
-					600: '#d4a853',
-					700: '#b8923a',
+					400: '#FFD86B',
+					500: '#FFC700',
+					600: '#E6B200',
+					700: '#B38F00',
 					800: '#9c7c21',
 					900: '#806608'
-				}
+				},
+				gray: {
+					50: '#F8FAFC',
+					100: '#F1F5F9',
+					200: '#E2E8F0',
+					300: '#CBD5E1',
+					400: '#94A3B8',
+					500: '#64748B',
+					600: '#475569',
+					700: '#334155',
+					800: '#1E293B',
+					900: '#0F172A',
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
