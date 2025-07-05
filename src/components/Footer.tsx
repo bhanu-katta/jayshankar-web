@@ -5,6 +5,7 @@ const companies = [
   'Industrial Park',
   'Pulp & Paper',
   'Power & Infrastructure',
+  'ODALAREVU RLNG IMPORTS PVT LTD',
 ];
 
 const Footer = () => (

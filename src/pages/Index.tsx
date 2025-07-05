@@ -5,6 +5,7 @@ import BusinessSectors from '../components/BusinessSectors';
 import About from '../components/About';
 import ImageCarousel from '../components/ImageCarousel';
 import Leadership from '../components/Leadership';
+import CompanyMap from '../components/CompanyMap';
 import Footer from '../components/Footer';
 
 const Index = () => {
@@ -20,6 +21,8 @@ const Index = () => {
       <ImageCarousel />
       <div className="h-12" />
       <Leadership />
+      <div className="h-12" />
+      <CompanyMap />
       <Footer />
     </div>
   );
